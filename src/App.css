@@ -1,5 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Allison&family=Roboto&display=swap');
-
-.cursive{
-    font-family: 'Allison', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Oswald&family=Roboto&display=swap');
+body {
+    background-image: url('./confetti-doodles.svg');
+    background-attachment: fixed;
 }
+
+/* .cursisve {
+    font-family: 'Allison', cursive;
+} */
+
+/* h1, h2, h3, h4, h5, h6 {
+    fonst-family: 'Oswald', sans-serif
+} */

@@ -2,23 +2,22 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography } from '@material-ui/core';
 import Particles from 'react-particles-js';
-import { StylesContext } from '@material-ui/styles';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { Link } from '@material-ui/core'
 
-const useStyles = makeStyles(({palette}) => ({
-    header: {
+const useStyles = makeStyles(({ palette }) => ({
+    root: {
+        display: 'block',
+        backgroundColor: 'white',
+        width: '100vw',
+        height: '100vh',
         '& #tsparticles': {
             position: 'absolute',
             width: '100vw',
             height: '100vh',
         },
-    },
-    particles: {
-        position: 'absolute',
-        width: '100vw',
-        height: '100vh',
     },
     content: {
         width: '100vw',
@@ -30,45 +29,57 @@ const useStyles = makeStyles(({palette}) => ({
         justifyContent: 'center'
     },
     socialIcons: {
-        paddingTop: '2rem',
+        paddingTop: '3rem',
         zIndex: '10',
         '& svg': {
-            fontSize: '3rem',
+            fontSize: '3.5rem',
             margin: '0 1rem',
+            transition: 'all 150ms ease-in-out',
             '&:hover': {
-                color: palette.primary.main
+                color: palette.orange.main,
+                transform: 'scale(1.2)',
+                cursor: 'pointer'
             }
         },
+        '& a': {
+            color: 'black'
+        }
     },
-    highlight1:{
-        backgroundColor: palette.primary.faded,
+    highlight1: {
+        backgroundColor: palette.green.highlight,
         padding: '5px',
     },
-    highlight2:{
-        backgroundColor: palette.secondary.faded,
+    highlight2: {
+        backgroundColor: palette.red.highlight,
         padding: '5px',
     },
-    cursive:{
+    signature: {
         fontFamily: ['Allison', 'cursive'],
-        fontSize: '9rem'
+        fontSize: '1.5em'
     }
 }))
 
 export default function Header() {
     const classes = useStyles();
     return (
-        <header className={classes.header}>
+        <header className={classes.root}>
             <div className={classes.content}>
-                <Typography variant="h1" background="primary">
-                    Hi there! I'm <span className={classes.cursive}>Heather O'Brien</span>
+                <Typography variant="h1">
+                    Hi there! I'm <span className={classes.signature}>Heather O'Brien</span>
                 </Typography>
                 <Typography variant="h5">
-                    I enjoy coding. Especially with <span className={classes.highlight1}>JavaScript</span> and <span className={classes.highlight2}>React</span>.
+                    I really enjoy coding. Especially with <span className={classes.highlight1}>JavaScript</span> and <span className={classes.highlight2}>React</span>.
                 </Typography>
                 <div className={classes.socialIcons}>
-                    <GitHubIcon />
-                    <InstagramIcon />
-                    <LinkedInIcon />
+                    <Link href="https://github.com/haobrien" target="_blank">
+                        <GitHubIcon />
+                    </Link>
+                    <Link href="https://www.instagram.com/hazelhob/" target="_blank">
+                        <InstagramIcon />
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/haobrientx/" target="_blank">
+                        <LinkedInIcon />
+                    </Link>
                 </div>
             </div>
             <Particles className={classes.Particles}
@@ -108,7 +119,7 @@ export default function Header() {
                         "opacity": {
                             "value": 0.7,
                             "random": true,
-                            "anim":{
+                            "anim": {
                                 "enable": true,
                                 "speed": 1,
                                 "opacity_min": 0.3
