@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import './styles/Loading.css'
 
-export default function Loading() {
+export default function Loader() {
     const [isHidden, setIsHidden] = useState(false);
     
     useEffect(() => {

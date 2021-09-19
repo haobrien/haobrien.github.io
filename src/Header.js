@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography } from '@material-ui/core';
+import { Typography, Box, Container } from '@material-ui/core';
 import Particles from 'react-particles-js';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -11,22 +11,29 @@ const useStyles = makeStyles(({ palette }) => ({
     root: {
         display: 'block',
         backgroundColor: 'white',
-        width: '100vw',
+        // width: '100vw',
         height: '100vh',
+        margin: '0',
+        padding: '0',
         '& #tsparticles': {
             position: 'absolute',
-            width: '100vw',
-            height: '100vh',
+            // width: '100%',
+            // height: '100%',
         },
     },
+    Particles: {
+        width: '100%',
+        height: '100%',
+    },
     content: {
-        width: '100vw',
+        width: '100%',
         height: '100vh',
         position: 'absolute',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        textAlign: 'center'
     },
     socialIcons: {
         paddingTop: '3rem',
@@ -62,8 +69,8 @@ const useStyles = makeStyles(({ palette }) => ({
 export default function Header() {
     const classes = useStyles();
     return (
-        <header className={classes.root}>
-            <div className={classes.content}>
+        <Box component="header" className={classes.root} p={0} m={0} id="header">
+            <Container className={classes.content} p={0} m={0} id="heading">
                 <Typography variant="h1">
                     Hi there! I'm <span className={classes.signature}>Heather O'Brien</span>
                 </Typography>
@@ -81,7 +88,7 @@ export default function Header() {
                         <LinkedInIcon />
                     </Link>
                 </div>
-            </div>
+            </Container>
             <Particles className={classes.Particles}
                 params={{
                     "particles": {
@@ -146,13 +153,14 @@ export default function Header() {
                             },
                             "push": {
                                 "particles_nb": 10,
-                                "particles_nb": 10
                             }
                         }
                     }
                 }} />
 
-        </header>
+            {/* </header> */}
+            {/* </Container> */}
+        </Box>
     )
 }
 

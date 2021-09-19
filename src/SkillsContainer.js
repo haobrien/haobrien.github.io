@@ -1,8 +1,7 @@
 import React from 'react'
 import Skill from './Skill';
-import { Box, Grid, Popover, Typography, Paper, Container, Chip } from '@material-ui/core'
+import { Box, Grid, Typography} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
-import { Avatar } from '@material-ui/core';
 import 'devicon'
 
 const useStyles = makeStyles(theme => ({

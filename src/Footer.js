@@ -20,7 +20,7 @@ export default function Footer() {
     return (
         <Box className={classes.root} component="footer" justifyContent="center" textAlign="center" alignItems="center">
             <Container>
-                <p>Made with <FavoriteIcon style={{color: 'red', marginBottom: '-5px'}}/> by <a href="http://github.com/haobrien" target="_blank">Heather OBrien</a></p>
+                <p>Made with <FavoriteIcon style={{color: 'red', marginBottom: '-5px'}}/> by <a href="http://github.com/haobrien" target="_blank" rel="noreferrer">Heather OBrien</a></p>
             </Container>
         </Box>
     )

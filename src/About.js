@@ -1,11 +1,11 @@
 import React from 'react'
-import { Box, Grid, Typography, Paper, Container } from '@material-ui/core'
+import { Box, Grid, Typography, Container } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import Avatar from '@material-ui/core/Avatar';
+import FadeInSection from './FadeInSection';
 import PetsIcon from '@material-ui/icons/Pets';
 import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
 import LocalFloristIcon from '@material-ui/icons/LocalFlorist';
@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     content: {
         lineHeight: '2rem'
     },
-    heading:{
+    heading: {
         textAlign: 'center',
     }
 }))
@@ -34,11 +34,11 @@ export default function About() {
     return (
         <Box component="section" className={classes.root} m={0} px={{ xs: 2, sm: 3, md: 5 }} py={{ xs: 5, sm: 10, md: 15 }} id="about">
             <Container>
-                <Typography variant="h2" className={classes.heading}gutterBottom>About Me</Typography>
+                <Typography variant="h2" className={classes.heading} gutterBottom>About Me</Typography>
                 <Grid container spacing={3} alignItems="center" justifyContent="center">
                     <Grid item sm>
                         <Box justifyContent="center" display="flex">
-                            <img className={classes.avatar} src="/avatar.png" />
+                            <img alt="avatar" className={classes.avatar} src="/avatar.png" />
                         </Box>
                     </Grid>
                     <Grid item sm>
@@ -48,39 +48,47 @@ export default function About() {
                         <Grid container justify="left">
                             <List>
 
-                                <ListItem>
-                                    <ListItemIcon>
-                                        <Box color="red.main">
-                                            <PetsIcon />
-                                        </Box>
-                                    </ListItemIcon>
-                                    <ListItemText primary="Fostering Great Pyrenees" secondary="Our home is always covered in fur" />
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemIcon>
-                                        <Box color="green.main">
-                                            <VideogameAssetIcon />
-                                        </Box>
-                                    </ListItemIcon>
-                                    <ListItemText primary="Gaming" secondary="I especially love the classics" />
-                                    {/* TODO: ADD TRIFORCE */}
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemIcon>
-                                        <Box color="pink.main">
-                                            <LocalFloristIcon />
-                                        </Box>
-                                    </ListItemIcon>
-                                    <ListItemText primary="Gardening & Landscaping" secondary="Stereotypical plant mom" />
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemIcon>
-                                        <Box color="blue.main">
-                                            <MenuBookIcon />
-                                        </Box>
-                                    </ListItemIcon>
-                                    <ListItemText primary="Reading" secondary="Currently reading the Wheel of Time" />
-                                </ListItem>
+                                <FadeInSection direction="left">
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <Box color="red.main">
+                                                <PetsIcon />
+                                            </Box>
+                                        </ListItemIcon>
+                                        <ListItemText primary="Fostering Great Pyrenees" secondary="Our home is always covered in fur" />
+                                    </ListItem>
+                                </FadeInSection>
+                                <FadeInSection direction="left">
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <Box color="green.main">
+                                                <VideogameAssetIcon />
+                                            </Box>
+                                        </ListItemIcon>
+                                        <ListItemText primary="Gaming" secondary="I especially love the classics" />
+                                        {/* TODO: ADD TRIFORCE */}
+                                    </ListItem>
+                                </FadeInSection>
+                                <FadeInSection direction="left">
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <Box color="pink.main">
+                                                <LocalFloristIcon />
+                                            </Box>
+                                        </ListItemIcon>
+                                        <ListItemText primary="Gardening & Landscaping" secondary="Stereotypical plant mom" />
+                                    </ListItem>
+                                </FadeInSection>
+                                <FadeInSection direction="left">
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <Box color="blue.main">
+                                                <MenuBookIcon />
+                                            </Box>
+                                        </ListItemIcon>
+                                        <ListItemText primary="Reading" secondary="Currently reading the Wheel of Time" />
+                                    </ListItem>
+                                </FadeInSection>
                             </List>
                         </Grid>
 
@@ -88,6 +96,6 @@ export default function About() {
                 </Grid>
             </Container>
 
-        </Box>
+        </Box >
     )
 }

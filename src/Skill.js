@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Grid, Popover, Typography, Paper, Container, Chip } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import { Avatar } from '@material-ui/core';
 import 'devicon'
@@ -37,7 +37,7 @@ export default function Skill({ name, icon }) {
                         </Avatar>
                     </div>
                     <div className="back">
-                        <Avatar aria-describedby={name} className={classes.skill}style={{backgroundColor: 'orange', color: 'white', fontWeight: 'bold', textTransform: 'uppercase'}}>
+                        <Avatar aria-describedby={name} className={classes.skill} style={{ backgroundColor: 'orange', color: 'white', fontWeight: 'bold', textTransform: 'uppercase' }}>
                             <Typography>{name}</Typography>
                         </Avatar>
                     </div>

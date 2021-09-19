@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Raleway:wght@500&family=Comfortaa&family=Allison&family=Oswald&family=Roboto&display=swap');
+
+html, body, #root{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../confetti-doodles.svg');
+    background-attachment: fixed;
+}
+
+@media only screen and (max-width: 900px) {
+    #heading{
+    }
+    #heading h1{
+        font-size: 3rem;
+    }    
+    #heading h5{
+        font-size: 1.5rem;
+        margin: 1.3rem 0;
+    }
+    
+}

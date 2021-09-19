@@ -1,5 +1,5 @@
 import 'normalize.css'
-import './App.css';
+import './styles/App.css';
 import Header from './Header';
 import ProjectsContainer from './ProjectsContainer'
 import About from './About';
@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 import SkillsContainer from './SkillsContainer';
 import ContactForm from './ContactForm';
 import Footer from './Footer';
-import Loading from './Loading';
+import Loader from './Loader';
 import { ThemeProvider } from '@material-ui/styles'
 import { createTheme } from '@material-ui/core/styles'
 
@@ -17,10 +17,11 @@ const theme = createTheme({
       // color: '#333',
     },
     h1: {
-      fontFamily: ['Oswald', 'sans-serif']
+      fontFamily: ['Raleway', 'sans-serif'],
     },
     h2: {
-      fontFamily: ['Oswald', 'sans-serif']
+      fontFamily: ['Raleway', 'sans-serif'],
+      textTransform: 'uppercasse'
     }
   },
   palette: {
@@ -65,7 +66,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider className="App" theme={theme}>
-      <Loading/>
+      <Loader/>
       <Navbar />
       <Header />
       <About />
