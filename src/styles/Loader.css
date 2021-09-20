@@ -8,9 +8,11 @@
     height: 100vh;
     z-index: 100;
     transition: all 400ms;
+    animation: fadeOut 2s ease-out;
+    animation-iteration-count: 1;
 }
 
-.hidden{
+.hidden {
     opacity: 0;
     z-index: -10;
 }
@@ -70,5 +72,29 @@
     }
     80%, 100% {
         transform: scale(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }

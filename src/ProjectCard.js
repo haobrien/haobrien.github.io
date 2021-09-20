@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import { Divider, Box, Chip } from '@material-ui/core';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -22,6 +21,9 @@ const useStyles = makeStyles(theme => ({
         color: 'white',
         '&:first-of-type': {
             backgroundColor: theme.palette.blue.main,
+        },
+        '&:hover': {
+            backgroundColor: theme.palette.yellow.main
         }
     },
     skillsBox: {
@@ -40,30 +42,30 @@ export default function ProjectCard({ name, description, img, demoUrl, repoUrl, 
     return (
         <FadeInSection direction="up">
             <Card className={classes.root} elevation={3} square>
-                <CardActionArea>
-                    <CardMedia
-                        component="img"
-                        alt={name}
-                        image={img}
-                        title={name}
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            {name}
-                        </Typography>
-                        <Box className={classes.skillsBox}>
-                            {skills.map(name => (
-                                <Chip
-                                    className={classes.chip}
-                                    label={name} />
-                            ))}
-                        </Box>
-                        <Typography variant="body2" component="p">
-                            {description}
-                        </Typography>
-                    </CardContent>
-                    <Divider variant="middle" />
-                </CardActionArea>
+                <CardMedia
+                    component="img"
+                    height="250"
+                    alt={name}
+                    image={img}
+                    title={name}
+                />
+                <Divider variant="fullWidth" />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {name}
+                    </Typography>
+                    <Box className={classes.skillsBox}>
+                        {skills.map(name => (
+                            <Chip
+                                className={classes.chip}
+                                label={name} />
+                        ))}
+                    </Box>
+                    <Typography variant="body2" component="p">
+                        {description}
+                    </Typography>
+                </CardContent>
+                <Divider variant="middle" />
                 <CardActions style={{ justifyContent: 'center' }}>
                     <Button
                         fullWidth
@@ -75,7 +77,7 @@ export default function ProjectCard({ name, description, img, demoUrl, repoUrl, 
                     >
                         Code
                     </Button>
-                    <Button
+                    {demoUrl && (<Button
                         fullWidth
                         href={demoUrl}
                         target="_blank"
@@ -84,7 +86,7 @@ export default function ProjectCard({ name, description, img, demoUrl, repoUrl, 
                         startIcon={<PersonalVideoIcon />}
                     >
                         Demo
-                    </Button>
+                    </Button>)}
                 </CardActions>
             </Card>
         </FadeInSection>

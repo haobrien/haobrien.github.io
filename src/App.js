@@ -10,6 +10,7 @@ import Footer from './Footer';
 import Loader from './Loader';
 import { ThemeProvider } from '@material-ui/styles'
 import { createTheme } from '@material-ui/core/styles'
+import { useState } from 'react';
 
 const theme = createTheme({
   typography: {
@@ -64,17 +65,22 @@ const theme = createTheme({
 });
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true)
+
   return (
-    <ThemeProvider className="App" theme={theme}>
-      <Loader/>
-      <Navbar />
-      <Header />
-      <About />
-      <SkillsContainer />
-      <ProjectsContainer />
-      <ContactForm />
-      <Footer/>
-    </ThemeProvider>
+
+    <div>
+      <ThemeProvider className="App" theme={theme}><Navbar />
+        {isLoading && <Loader isLoading={isLoading} setIsLoading={setIsLoading} />}
+        <Header />
+        <About />
+        <SkillsContainer />
+        <ProjectsContainer />
+        <ContactForm />
+        <Footer />
+      </ThemeProvider>
+      )
+    </div>
   );
 }
 

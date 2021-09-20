@@ -1,22 +1,21 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import './styles/Loading.css'
+import { useEffect } from 'react'
+import './styles/Loader.css'
 
-export default function Loader() {
-    const [isHidden, setIsHidden] = useState(false);
-    
+export default function Loader({ setIsLoading }) {
+
     useEffect(() => {
         setTimeout(() => {
-            setIsHidden(true)
+            setIsLoading(false)
         }, 2000)
     })
 
     return (
-        <div class={isHidden ? 'loader hidden' : 'loader'}>
-            <div class="ball ball-1"></div>
-            <div class="ball ball-2"></div>
-            <div class="ball ball-3"></div>
-            <div class="ball ball-4"></div>
+        <div className='loader'>
+            <div className="ball ball-1"></div>
+            <div className="ball ball-2"></div>
+            <div className="ball ball-3"></div>
+            <div className="ball ball-4"></div>
         </div>
     )
 }

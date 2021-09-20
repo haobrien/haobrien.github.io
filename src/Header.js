@@ -5,52 +5,35 @@ import Particles from 'react-particles-js';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import { Link } from '@material-ui/core'
 
 const useStyles = makeStyles(({ palette }) => ({
     root: {
-        display: 'block',
+        display: 'flex',
         backgroundColor: 'white',
-        // width: '100vw',
         height: '100vh',
-        margin: '0',
-        padding: '0',
-        '& #tsparticles': {
-            position: 'absolute',
-            // width: '100%',
-            // height: '100%',
-        },
     },
-    Particles: {
+    particles: {
         width: '100%',
         height: '100%',
+        display: 'hidden'
     },
     content: {
-        width: '100%',
-        height: '100vh',
         position: 'absolute',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
         textAlign: 'center'
     },
     socialIcons: {
         paddingTop: '3rem',
-        zIndex: '10',
-        '& svg': {
+        '& a svg': {
             fontSize: '3.5rem',
             margin: '0 1rem',
             transition: 'all 150ms ease-in-out',
+            color: 'black',
+            cursor: 'pointer',
             '&:hover': {
                 color: palette.orange.main,
                 transform: 'scale(1.2)',
-                cursor: 'pointer'
             }
         },
-        '& a': {
-            color: 'black'
-        }
     },
     highlight1: {
         backgroundColor: palette.green.highlight,
@@ -69,8 +52,8 @@ const useStyles = makeStyles(({ palette }) => ({
 export default function Header() {
     const classes = useStyles();
     return (
-        <Box component="header" className={classes.root} p={0} m={0} id="header">
-            <Container className={classes.content} p={0} m={0} id="heading">
+        <Box component="header" className={classes.root} justifyContent="center" alignItems="center">
+            <Container className={classes.content}>
                 <Typography variant="h1">
                     Hi there! I'm <span className={classes.signature}>Heather O'Brien</span>
                 </Typography>
@@ -78,18 +61,18 @@ export default function Header() {
                     I really enjoy coding. Especially with <span className={classes.highlight1}>JavaScript</span> and <span className={classes.highlight2}>React</span>.
                 </Typography>
                 <div className={classes.socialIcons}>
-                    <Link href="https://github.com/haobrien" target="_blank">
+                    <a rel="noreferrer"  href="https://github.com/haobrien" target="_blank">
                         <GitHubIcon />
-                    </Link>
-                    <Link href="https://www.instagram.com/hazelhob/" target="_blank">
+                    </a>
+                    <a rel="noreferrer"  href="https://www.instagram.com/hazelhob/" target="_blank">
                         <InstagramIcon />
-                    </Link>
-                    <Link href="https://www.linkedin.com/in/haobrientx/" target="_blank">
+                    </a>
+                    <a rel="noreferrer" href="https://www.linkedin.com/in/haobrientx/" target="_blank">
                         <LinkedInIcon />
-                    </Link>
+                    </a>
                 </div>
             </Container>
-            <Particles className={classes.Particles}
+            <Particles className={classes.particles}
                 params={{
                     "particles": {
                         "number": {
@@ -133,29 +116,29 @@ export default function Header() {
                             },
                         },
                     },
-                    "interactivity": {
-                        "events": {
-                            "onhover": {
-                                "enable": true,
-                                "mode": "bubble"
-                            },
-                            "onclick": {
-                                "enable": false,
-                                "mode": "push"
-                            }
-                        },
-                        "modes": {
-                            "bubble": {
-                                "distance": 250,
-                                "duration": 2,
-                                "size": 0,
-                                "opacity": 0.8
-                            },
-                            "push": {
-                                "particles_nb": 10,
-                            }
-                        }
-                    }
+                    // "interactivity": {
+                    //     "events": {
+                    //         "onhover": {
+                    //             "enable": true,
+                    //             "mode": "bubble"
+                    //         },
+                    //         "onclick": {
+                    //             "enable": false,
+                    //             "mode": "push"
+                    //         }
+                    //     },
+                    //     "modes": {
+                    //         "bubble": {
+                    //             "distance": 250,
+                    //             "duration": 2,
+                    //             "size": 0,
+                    //             "opacity": 0.8
+                    //         },
+                    //         "push": {
+                    //             "particles_nb": 10,
+                    //         }
+                    //     }
+                    // }
                 }} />
 
             {/* </header> */}
