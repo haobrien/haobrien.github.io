@@ -7,7 +7,7 @@ import { Grid, Box, Container } from '@material-ui/core';
 
 const useStyles = makeStyles(({ palette }) => ({
     root: {
-        background: 'white',
+        background: palette.light.main
     }
 }))
 
@@ -61,7 +61,7 @@ export default function ProjectsContainer() {
         <Box component="section" textAlign="center" className={classes.root} m={0} px={{ xs: 2, sm: 3, md: 5 }} py={{ xs: 5, sm: 10, md: 15 }} id="projects">
             <Container>
                 <Typography variant="h2" align="center" gutterBottom>Projects</Typography>
-                <Grid container spacing="10" justifyContent="center">
+                <Grid container spacing="6" justifyContent="center">
                     {projects.map(project => (
                         <Grid item sm="6" md="4">
                             <ProjectCard {...project} />

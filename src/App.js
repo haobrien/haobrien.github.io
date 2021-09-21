@@ -15,57 +15,59 @@ import { useState } from 'react';
 const theme = createTheme({
   typography: {
     allVariants: {
-      // color: '#333',
+      // color: '#3d405b',
     },
     h1: {
-      fontFamily: ['Raleway', 'sans-serif'],
+      fontFamily: ['Oswald', 'sans-serif'],
     },
     h2: {
-      fontFamily: ['Raleway', 'sans-serif'],
-      textTransform: 'uppercasse'
+      fontFamily: ['Oswald', 'sans-serif'],
     }
   },
   palette: {
-    red: {
+    // red: {
+    //   // Purple and green play nicely together.
+    //   main: '#f4f1de',
+    //   highlight: 'rgba(244, 241, 222,0.5)'
+    // },
+    white: {
+      main: '#f8f8f8'
+    },
+    light: {
       // Purple and green play nicely together.
-      main: 'rgba(246,79,85, 1)',
+      main: '#f8f8f8',
       highlight: 'rgba(246,79,85,0.5)'
     },
-    orange: {
+    dark: {
       // This is green.A700 as hex.
-      main: '#ed9479',
-      highlight: 'rgba(237,148,121,0.5)'
+      main: '#023047',
+      highlight: 'rgba(101,184,206,0.5)'
     },
-    yellow: {
+    primary: {
       // This is green.A700 as hex.
-      main: '#f1e076',
-      highlight: 'rgba(241,224,118,0.5)'
+      main: '#2ec4b6',
+      highlight: 'rgba(224, 122, 95,0.5)'
     },
-    green: {
+    secondary: {
       // This is green.A700 as hex.
-      main: '#C0E5D5',
-      highlight: 'rgba(151,212,185, 0.5)',
+      main: '#ff9f1c',
+      highlight: 'rgba(242, 204, 143,0.5)'
     },
-    blue: {
+    tertiary: {
       // This is green.A700 as hex.
-      main: '#A2D4E1',
-      highlight: 'rgba(101,184,206,0.3)'
+      main: '#e71d36',
+      highlight: 'rgba(129, 178, 154, 0.5)',
     },
-    pink: {
-      // This is green.A700 as hex.
-      main: '#ec95ce',
-      highlight: 'rgba(236,149,206,0.5)'
-    },
-    text: {
-      red: 'rgba(246,79,85, 1)',
-      orange: '#ed9479',
-      yellow: '#f1e076',
-    }
+    // pink: {
+    //   // This is green.A700 as hex.
+    //   main: '#f5cac3',
+    //   highlight: 'rgba(236,149,206,0.5)'
+    // },
   },
 });
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
   return (
 

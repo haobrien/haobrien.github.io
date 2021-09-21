@@ -26,45 +26,41 @@ const useStyles = makeStyles(({ palette }) => ({
         '& a svg': {
             fontSize: '3.5rem',
             margin: '0 1rem',
-            transition: 'all 150ms ease-in-out',
+            transition: 'all 300ms ease-out',
             color: 'black',
             cursor: 'pointer',
             '&:hover': {
-                color: palette.orange.main,
-                transform: 'scale(1.2)',
+                color: palette.primary.main,
+                transform: 'scale(1.26)',
             }
         },
     },
     highlight1: {
-        backgroundColor: palette.green.highlight,
+        backgroundColor: palette.secondary.main,
         padding: '5px',
     },
     highlight2: {
-        backgroundColor: palette.red.highlight,
+        backgroundColor: palette.tertiary.main,
         padding: '5px',
     },
-    signature: {
-        fontFamily: ['Allison', 'cursive'],
-        fontSize: '1.5em'
-    }
 }))
 
 export default function Header() {
     const classes = useStyles();
     return (
         <Box component="header" className={classes.root} justifyContent="center" alignItems="center">
-            <Container className={classes.content}>
+            <Container className={classes.content} id="heading" >
                 <Typography variant="h1">
-                    Hi there! I'm <span className={classes.signature}>Heather O'Brien</span>
+                    Hi there! I'm <span className="signature">Heather O'Brien</span>
                 </Typography>
                 <Typography variant="h5">
                     I really enjoy coding. Especially with <span className={classes.highlight1}>JavaScript</span> and <span className={classes.highlight2}>React</span>.
                 </Typography>
                 <div className={classes.socialIcons}>
-                    <a rel="noreferrer"  href="https://github.com/haobrien" target="_blank">
+                    <a rel="noreferrer" href="https://github.com/haobrien" target="_blank">
                         <GitHubIcon />
                     </a>
-                    <a rel="noreferrer"  href="https://www.instagram.com/hazelhob/" target="_blank">
+                    <a rel="noreferrer" href="https://www.instagram.com/hazelhob/" target="_blank">
                         <InstagramIcon />
                     </a>
                     <a rel="noreferrer" href="https://www.linkedin.com/in/haobrientx/" target="_blank">
@@ -101,7 +97,8 @@ export default function Header() {
                             "attract": true
                         },
                         "color": {
-                            "value": ["#f64f55", "#ed9479", "#f1e076", "#97d4b9", "#65b8ce", "#ec95ce"]
+                            "value": ["#2ec4b6", "#ff9f1c", "#e71d36"]
+                            // "value": ["#f64f55", "#ed9479", "#f1e076", "#97d4b9", "#65b8ce", "#ec95ce"]
                         },
                         "shape": {
                             "type": ["polygon"],
@@ -116,29 +113,6 @@ export default function Header() {
                             },
                         },
                     },
-                    // "interactivity": {
-                    //     "events": {
-                    //         "onhover": {
-                    //             "enable": true,
-                    //             "mode": "bubble"
-                    //         },
-                    //         "onclick": {
-                    //             "enable": false,
-                    //             "mode": "push"
-                    //         }
-                    //     },
-                    //     "modes": {
-                    //         "bubble": {
-                    //             "distance": 250,
-                    //             "duration": 2,
-                    //             "size": 0,
-                    //             "opacity": 0.8
-                    //         },
-                    //         "push": {
-                    //             "particles_nb": 10,
-                    //         }
-                    //     }
-                    // }
                 }} />
 
             {/* </header> */}

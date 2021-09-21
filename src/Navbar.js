@@ -8,8 +8,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         position: 'absolute',
         zIndex: '2',
-        backgroundColor: theme.palette.blue.highlight,
-        width: '100%'
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.white.main,
+        width: '100%',
     },
 }));
 
@@ -22,7 +23,7 @@ export default function Navbar() {
                 <Grid container component="nav" justifyContent="space-around">
                     <Grid item>
                         <Link to="about" spy={true} smooth={true}>
-                            <Button color="red">About</Button>
+                            <Button color="inherit">About</Button>
                         </Link>
                     </Grid>
 

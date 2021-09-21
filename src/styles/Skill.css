@@ -29,14 +29,6 @@
     position: relative;
 }
 
-.front .skill, .back .skill {
-    padding: 1.5rem;
-    font-weight: bold;
-    background-color: white;
-    font-size: 2.5rem;
-    color: #333;
-}
-
 .front, .back {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -57,13 +49,17 @@
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
+.front .skill, .back .skill {
+    padding: 1.5rem;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
 
-.back .skill {
-    background-color: orange;
-    color: white;
+.front .skill{
+    background-color: white;
 }
 
 .back .skill p {
     text-transform: 'uppercase';
-    font-family: 'Oswald';
+    font-family: 'Oswald', serif;
 }

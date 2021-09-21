@@ -1,24 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Raleway:wght@500&family=Comfortaa&family=Allison&family=Oswald&family=Roboto&display=swap');
-
-html, body, #root{
+html, body, #root {
     margin: 0;
     padding: 0;
 }
 
-body {
-    background-image: url('../confetti-doodles.svg');
-    background-attachment: fixed;
+#nav a button {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
 }
 
-@media only screen and (max-width: 900px) {
-    #heading{
+h2.MuiTypography-h2 {
+    padding-bottom: 0.5em;
+}
+
+.signature {
+    font-family: 'Allison', cursive;
+    font-size: 1.5em;
+}
+
+@media only screen and (max-width: 1300px) {
+    #heading h1 {
+        font-size: 3.5rem;
     }
-    #heading h1{
-        font-size: 3rem;
-    }    
-    #heading h5{
+    #heading h5 {
         font-size: 1.5rem;
         margin: 1.3rem 0;
     }
-    
+    #heading .signature {
+        display: block;
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #heading h1 {
+        font-size: 2.2rem;
+    }
+    #heading .signature {
+        font-size: 1.8em;
+    }
+    #heading h5 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin: 1rem 0;
+    }
+    #heading a svg {
+        font-size: 3rem;
+    }
+    #nav a button {
+        font-size: 0.7rem;
+    }
 }

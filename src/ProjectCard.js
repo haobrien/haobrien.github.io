@@ -13,25 +13,25 @@ import PersonalVideoIcon from '@material-ui/icons/PersonalVideo';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        textAlign: 'center'
+        textAlign: 'center',
     },
     button: {
         fontWeight: 'bold',
-        backgroundColor: theme.palette.red.main,
-        color: 'white',
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.white.main,
         '&:first-of-type': {
-            backgroundColor: theme.palette.blue.main,
+            backgroundColor: theme.palette.secondary.main,
         },
         '&:hover': {
-            backgroundColor: theme.palette.yellow.main
+            backgroundColor: theme.palette.tertiary.main
         }
     },
     skillsBox: {
         margin: '1rem 0'
     },
     chip: {
-        backgroundColor: theme.palette.orange.main,
-        color: 'white',
+        borderColor: theme.palette.tertiary.main,
+        color: theme.palette.tertiary.main,
         margin: '0.1rem'
     }
 }))
@@ -58,7 +58,8 @@ export default function ProjectCard({ name, description, img, demoUrl, repoUrl, 
                         {skills.map(name => (
                             <Chip
                                 className={classes.chip}
-                                label={name} />
+                                label={name} 
+                                variant="outlined"/>
                         ))}
                     </Box>
                     <Typography variant="body2" component="p">

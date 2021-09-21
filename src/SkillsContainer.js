@@ -1,13 +1,16 @@
 import React from 'react'
 import Skill from './Skill';
-import { Box, Grid, Typography} from '@material-ui/core'
+import { Box, Grid, Container, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import 'devicon'
 
 const useStyles = makeStyles(theme => ({
     root: {
-        backgroundColor: theme.palette.blue.main
+        backgroundColor: theme.palette.primary.main,
     },
+    title:{
+        color: theme.palette.white.main
+    }
 }))
 
 const skills = [
@@ -24,18 +27,17 @@ const skills = [
 
 
 export default function SkillsContainer() {
-
-
-
     const classes = useStyles()
     return (
         <Box component="section" textAlign="center" className={classes.root} m={0} px={{ xs: 2, sm: 3, md: 5 }} py={{ xs: 5, sm: 10, md: 15 }} id="skills">
-            <Typography variant="h2" gutterBottom>Skills</Typography>
-            <Grid container spacing={6} alignsItems="center" justifyContent="center">
-                {skills.map(skill => (
-                    <Skill {...skill} />
-                ))}
-            </Grid>
+            <Container>
+            <Typography className={classes.title} variant="h2" gutterBottom>Skills</Typography>
+                <Grid container spacing={6} alignsItems="center" justifyContent="center">
+                    {skills.map(skill => (
+                        <Skill {...skill} />
+                    ))}
+                </Grid>
+            </Container>
         </Box>
     )
 }

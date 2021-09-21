@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     root: {
         // borderTop: '3rem solid ' + theme.palette.blue.main,
         // borderBottom: '3rem solid ' + theme.palette.blue.main,
-        backgroundColor: 'whitesmoke'
+        backgroundColor: theme.palette.light.main
         // color: 'white'
     },
     avatar: {
@@ -27,6 +27,9 @@ const useStyles = makeStyles(theme => ({
     },
     heading: {
         textAlign: 'center',
+    },
+    iconBox: {
+        color: theme.palette.secondary.main
     }
 }))
 
@@ -43,7 +46,8 @@ export default function About() {
                         </Box>
                     </Grid>
                     <Grid item sm>
-                        <Typography paragraph className={classes.content}>Well hello there! My name is Heather, and I'm a long time lover of web development and design. I proudly grauated in 2013 from the University of North Texas with B.S. in Computer Science, and focus on using my knowledge to create great user experiences.</Typography>
+                        <Typography paragraph className={classes.content}>Well hello there! My name is Heather, and I'm a lifelong lover of web development and design.  </Typography>
+                        <Typography paragraph className={classes.content}>I proudly grauated from the University of North Texas with B.S. in Computer Science, and focus using my knowledge to create great user experiences.</Typography>
                         <Typography paragraph className={classes.content}>When I'm not coding, I enjoy doing some other things: </Typography>
 
                         <Grid container justify="left">
@@ -52,7 +56,7 @@ export default function About() {
                                 <FadeInSection direction="left">
                                     <ListItem>
                                         <ListItemIcon>
-                                            <Box color="orange.main">
+                                            <Box className={classes.iconBox}>
                                                 <CakeIcon />
                                             </Box>
                                         </ListItemIcon>
@@ -62,7 +66,7 @@ export default function About() {
                                 <FadeInSection direction="left">
                                     <ListItem>
                                         <ListItemIcon>
-                                            <Box color="blue.main">
+                                            <Box className={classes.iconBox}>
                                                 <VideogameAssetIcon />
                                             </Box>
                                         </ListItemIcon>
@@ -72,17 +76,17 @@ export default function About() {
                                 <FadeInSection direction="left">
                                     <ListItem>
                                         <ListItemIcon>
-                                            <Box color="yellow.main">
+                                            <Box className={classes.iconBox}>
                                                 <LocalFloristIcon />
                                             </Box>
                                         </ListItemIcon>
-                                        <ListItemText primary="Gardening & Landscaping" secondary="All plants, indoors & out" />
+                                        <ListItemText primary="Gardening & Landscaping" secondary="All plants - indoors & out" />
                                     </ListItem>
                                 </FadeInSection>
                                 <FadeInSection direction="left">
                                     <ListItem>
                                         <ListItemIcon>
-                                            <Box color="green.main">
+                                            <Box className={classes.iconBox}>
                                                 <MenuBookIcon />
                                             </Box>
                                         </ListItemIcon>
@@ -92,7 +96,7 @@ export default function About() {
                                 <FadeInSection direction="left">
                                     <ListItem>
                                         <ListItemIcon>
-                                            <Box color="orange.main">
+                                            <Box className={classes.iconBox}>
                                                 <PetsIcon />
                                             </Box>
                                         </ListItemIcon>
