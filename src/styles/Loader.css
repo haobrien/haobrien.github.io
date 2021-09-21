@@ -24,23 +24,23 @@
     border-radius: 50%;
     margin: 0.2rem;
     animation: ball 1s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    transform: scale(0.1);
+    transform: scale(0);
 }
 
 .ball-1 {
-    background-color: #ed9479;
+    background-color: #ffa69e;
 }
 
 .ball-2 {
-    background-color: #A2D4E1;
+    background-color: #aed9e0;
 }
 
 .ball-3 {
-    background-color: #f1e076;
+    background-color: #75E6CF;
 }
 
 .ball-4 {
-    background-color: #C0E5D5;
+    background-color: #ffa69e;
 }
 
 .ball-1 {

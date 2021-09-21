@@ -22,6 +22,13 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: ['Oswald', 'sans-serif'],
+    },
+  },
+  overrides: {
+    MuiTypography: {
+      gutterBottom: {
+        marginBottom: '3rem'
+      }
     }
   },
   palette: {
@@ -67,7 +74,7 @@ const theme = createTheme({
 });
 
 function App() {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   return (
 

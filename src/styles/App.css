@@ -9,10 +9,6 @@ html, body, #root {
     font-size: 1rem;
 }
 
-h2.MuiTypography-h2 {
-    padding-bottom: 0.5em;
-}
-
 .signature {
     font-family: 'Allison', cursive;
     font-size: 1.5em;
@@ -48,6 +44,6 @@ h2.MuiTypography-h2 {
         font-size: 3rem;
     }
     #nav a button {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 }

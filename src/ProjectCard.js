@@ -30,8 +30,8 @@ const useStyles = makeStyles(theme => ({
         margin: '1rem 0'
     },
     chip: {
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.white.main,
+        borderColor: theme.palette.primary.main,
+        color: theme.palette.primary.main,
         margin: '0.1rem'
     }
 }))
@@ -51,14 +51,15 @@ export default function ProjectCard({ name, description, img, demoUrl, repoUrl, 
                 />
                 <Divider variant="fullWidth" />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography variant="h5" component="h2">
                         {name}
                     </Typography>
                     <Box className={classes.skillsBox}>
                         {skills.map(name => (
                             <Chip
                                 className={classes.chip}
-                                label={name}/>
+                                label={name}
+                                variant="outlined"/>
                         ))}
                     </Box>
                     <Typography variant="body2" component="p">

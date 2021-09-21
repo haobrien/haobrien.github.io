@@ -29,8 +29,16 @@ const projects = [
         skills: ['JavaScript', 'ExpressJS', 'MongoDB', 'Bootstrap', 'NodeJS', 'EJS', 'Responsive']
     },
     {
+        name: 'Dad Jokes',
+        description: 'Everyone loves a dad joke. Upvote your favorites, downvote the others. Utilizes local storage to keep your votes.',
+        img: 'dadjokes.png',
+        demoUrl: 'https://haobrien.github.io/dad-jokes/',
+        repoUrl: 'https://github.com/haobrien/dad-jokes',
+        skills: ['React', 'JavaScript', 'Axios', 'HTML', 'CSS', 'Responsive']
+    },
+    {
         name: 'Lights Out',
-        description: 'A virtual recreation of the 90s classic, Lights Out! Turn out all the lights to win.',
+        description: 'A virtual recreation of the 90s classic, Lights Out! Turn out all the lights to win. Refresh the page to start a new game.',
         img: 'lights-out.png',
         demoUrl: 'https://haobrien.github.io/lights-out/',
         repoUrl: 'https://github.com/haobrien/lights-out',
@@ -38,7 +46,7 @@ const projects = [
     },
     {
         name: 'Deck of Cards',
-        description: 'A virtual whole deck of cards. Draw one card at a time. After all 52 cards have been drawn, you can receive a new shuffled deck. Mobile friendly.',
+        description: 'A virtual whole deck of cards. Draw one card at a time. After all 52 cards have been drawn, you can receive a new shuffled deck.',
         img: 'deckofcards.png',
         demoUrl: 'https://haobrien.github.io/deck-of-cards/',
         repoUrl: 'https://github.com/haobrien/deck-of-cards',
@@ -49,7 +57,7 @@ const projects = [
         description: "You're looking at it! Built using React and Material UI. Currently working on making it more usable for other developers.",
         img: '/portfolio.png',
         demoUrl: '',
-        repoUrl: 'https://github.com/haobrien/deck-of-cards',
+        repoUrl: 'https://github.com/haobrien/haobrien.github.io',
         skills: ['React', 'JavaScript', 'HTML', 'CSS', 'Material UI', 'Responsive']
     },
 ]
