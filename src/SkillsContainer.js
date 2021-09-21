@@ -6,7 +6,7 @@ import 'devicon'
 
 const useStyles = makeStyles(theme => ({
     root: {
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.dark.main,
     },
     title:{
         color: theme.palette.white.main

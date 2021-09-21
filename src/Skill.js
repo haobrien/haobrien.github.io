@@ -10,11 +10,12 @@ const useStyles = makeStyles(theme => ({
         boxShadow: theme.shadows[3],
     },
     icon: {
-        color: theme.palette.dark.main,
+        color: theme.palette.primary.main,
     },
     back: {
         '& div': {
-            backgroundColor: theme.palette.dark.main
+            backgroundColor: theme.palette.tertiary.main,
+            color: theme.palette.white.main
         }
     }
 }))

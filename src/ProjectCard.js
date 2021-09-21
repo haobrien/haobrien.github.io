@@ -17,21 +17,21 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         fontWeight: 'bold',
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.dark.main,
         color: theme.palette.white.main,
         '&:first-of-type': {
             backgroundColor: theme.palette.secondary.main,
         },
         '&:hover': {
-            backgroundColor: theme.palette.tertiary.main
+            backgroundColor: theme.palette.tertiary.main,
         }
     },
     skillsBox: {
         margin: '1rem 0'
     },
     chip: {
-        borderColor: theme.palette.tertiary.main,
-        color: theme.palette.tertiary.main,
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.white.main,
         margin: '0.1rem'
     }
 }))
@@ -41,7 +41,7 @@ export default function ProjectCard({ name, description, img, demoUrl, repoUrl, 
 
     return (
         <FadeInSection direction="up">
-            <Card className={classes.root} elevation={3} square>
+            <Card className={classes.root} elevation={3}>
                 <CardMedia
                     component="img"
                     height="250"
@@ -58,8 +58,7 @@ export default function ProjectCard({ name, description, img, demoUrl, repoUrl, 
                         {skills.map(name => (
                             <Chip
                                 className={classes.chip}
-                                label={name} 
-                                variant="outlined"/>
+                                label={name}/>
                         ))}
                     </Box>
                     <Typography variant="body2" component="p">

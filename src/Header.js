@@ -26,21 +26,21 @@ const useStyles = makeStyles(({ palette }) => ({
         '& a svg': {
             fontSize: '3.5rem',
             margin: '0 1rem',
-            transition: 'all 300ms ease-out',
+            transition: 'all 200ms ease-in-out',
             color: 'black',
             cursor: 'pointer',
             '&:hover': {
-                color: palette.primary.main,
-                transform: 'scale(1.26)',
+                color: palette.tertiary.main,
+                transform: 'scale(1.25)',
             }
         },
     },
     highlight1: {
-        backgroundColor: palette.secondary.main,
+        backgroundColor: palette.secondary.highlight,
         padding: '5px',
     },
     highlight2: {
-        backgroundColor: palette.tertiary.main,
+        backgroundColor: palette.tertiary.highlight,
         padding: '5px',
     },
 }))
@@ -97,19 +97,19 @@ export default function Header() {
                             "attract": true
                         },
                         "color": {
-                            "value": ["#2ec4b6", "#ff9f1c", "#e71d36"]
+                            "value": ["#ffa69e", "#aed9e0", "#b8f2e6"]
                             // "value": ["#f64f55", "#ed9479", "#f1e076", "#97d4b9", "#65b8ce", "#ec95ce"]
                         },
                         "shape": {
                             "type": ["polygon"],
                         },
                         "opacity": {
-                            "value": 0.7,
+                            "value": 0.9,
                             "random": true,
                             "anim": {
                                 "enable": true,
                                 "speed": 1,
-                                "opacity_min": 0.3
+                                "opacity_min": 0.5
                             },
                         },
                     },

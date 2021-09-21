@@ -40,23 +40,23 @@ const theme = createTheme({
     },
     dark: {
       // This is green.A700 as hex.
-      main: '#023047',
+      main: '#5e6472',
       highlight: 'rgba(101,184,206,0.5)'
     },
     primary: {
       // This is green.A700 as hex.
-      main: '#2ec4b6',
-      highlight: 'rgba(224, 122, 95,0.5)'
+      main: '#ffa69e',
+      highlight: 'rgba(255, 166, 158,0.5)'
     },
     secondary: {
       // This is green.A700 as hex.
-      main: '#ff9f1c',
-      highlight: 'rgba(242, 204, 143,0.5)'
+      main: '#aed9e0',
+      highlight: 'rgba(174, 217, 224,0.5)'
     },
     tertiary: {
       // This is green.A700 as hex.
-      main: '#e71d36',
-      highlight: 'rgba(129, 178, 154, 0.5)',
+      main: '#75E6CF',
+      highlight: 'rgba(117, 230, 207, 0.5)',
     },
     // pink: {
     //   // This is green.A700 as hex.

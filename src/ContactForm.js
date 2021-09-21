@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         backgroundColor: theme.palette.secondary.main,
-        width: '50%',
+        // width: '50%',
         color: theme.palette.light.main,
         '&:hover':{
             backgroundColor: theme.palette.tertiary.main
@@ -38,9 +38,12 @@ export default function ContactForm() {
             <Box component="section" textAlign="center" className={classes.root} m={0} px={{ xs: 2, sm: 3, md: 5 }} py={{ xs: 5, sm: 10, md: 15 }} id="contact">
                 <Container>
                     <Typography className={classes.title} variant="h2" gutterBottom>Contact</Typography>
-                    <Paper square elevation={3} className={classes.paper}>
+                    <Paper elevation={3} className={classes.paper}>
+                        <Typography variant="h5">
+                            <p>Thank you</p>
+                        </Typography>
                         <Typography paragraph>
-                            <p>Thank you - your message has been sent!</p>
+                            <p>Your message has been sent!</p>
                         </Typography>
                     </Paper>
                 </Container>
@@ -53,7 +56,7 @@ export default function ContactForm() {
 
             <Container>
                 <Typography className={classes.title} variant="h2" gutterBottom>Contact</Typography>
-                    <Paper square elevation={3} className={classes.paper}>
+                    <Paper elevation={3} className={classes.paper}>
                         <form onSubmit={handleSubmit} autoComplete="off">
                             <TextField className={classes.input}
                                 fullWidth
@@ -85,6 +88,7 @@ export default function ContactForm() {
                                 required
                             />
                             <Button
+                                fullWidth
                                 type="submit"
                                 variant="contained"
                                 className={classes.button}

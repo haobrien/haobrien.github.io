@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'center',
     },
     iconBox: {
-        color: theme.palette.secondary.main
+        color: theme.palette.primary.main
     }
 }))
 
