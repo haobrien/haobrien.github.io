@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Box, Container } from '@material-ui/core';
+import particleConfig from './config/particleConfig';
 import Particles from 'react-particles-js';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -68,55 +69,7 @@ export default function Header() {
                     </a>
                 </div>
             </Container>
-            <Particles className={classes.particles}
-                params={{
-                    "particles": {
-                        "number": {
-                            "value": 100,
-                            "density": {
-                                "enable": false
-                            }
-                        },
-                        "size": {
-                            "value": 5,
-                            "random": true,
-                            "anim": {
-                                "speed": 4,
-                                "size_min": 0.3
-                            }
-                        },
-                        "line_linked": {
-                            "enable": false
-                        },
-                        "move": {
-                            "random": true,
-                            "speed": 1,
-                            "direction": "none",
-                            "out_mode": "bounce",
-                            "bounce": true,
-                            "attract": true
-                        },
-                        "color": {
-                            "value": ["#ffa69e", "#aed9e0", "#b8f2e6"]
-                            // "value": ["#f64f55", "#ed9479", "#f1e076", "#97d4b9", "#65b8ce", "#ec95ce"]
-                        },
-                        "shape": {
-                            "type": ["polygon"],
-                        },
-                        "opacity": {
-                            "value": 0.9,
-                            "random": true,
-                            "anim": {
-                                "enable": true,
-                                "speed": 1,
-                                "opacity_min": 0.5
-                            },
-                        },
-                    },
-                }} />
-
-            {/* </header> */}
-            {/* </Container> */}
+            <Particles className={classes.particles} params={particleConfig} />
         </Box>
     )
 }

@@ -1,10 +1,8 @@
-// Make sure to run npm install @formspree/react
-// For more help visit https://formspr.ee/react-help
 import React from 'react';
-import { useForm } from '@formspree/react';
 import { TextField, Typography, Container, Box, Paper, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles'
 import SendIcon from '@material-ui/icons/Send';
+import { useForm } from '@formspree/react';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -21,7 +19,6 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         backgroundColor: theme.palette.secondary.main,
-        // width: '50%',
         color: theme.palette.light.main,
         '&:hover':{
             backgroundColor: theme.palette.tertiary.main
@@ -50,10 +47,8 @@ export default function ContactForm() {
             </Box>
         )
     }
-
     return (
         <Box component="section" textAlign="center" className={classes.root} m={0} px={{ xs: 2, sm: 3, md: 5 }} py={{ xs: 5, sm: 10, md: 15 }} id="contact">
-
             <Container>
                 <Typography className={classes.title} variant="h2" gutterBottom>Contact</Typography>
                     <Paper elevation={3} className={classes.paper}>

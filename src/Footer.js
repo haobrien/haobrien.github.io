@@ -2,12 +2,12 @@ import React from 'react'
 import {Box, Container} from '@material-ui/core'
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { makeStyles } from '@material-ui/core/styles';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         position: 'absolute',
         width: '100%',
         zIndex: '2',
-        // marginTop: '2rem',
         backgroundColor: theme.palette.dark.main,
         color: 'white',
         '& a':{

@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
     const classes = useStyles();
-
     return (
         <Box component="nav" className={classes.root} py={1} id="nav">
             <Container>

@@ -1,11 +1,11 @@
 import React from 'react'
+import FadeInSection from './FadeInSection';
 import { Box, Grid, Typography, Container } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import FadeInSection from './FadeInSection';
 import PetsIcon from '@material-ui/icons/Pets';
 import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
 import LocalFloristIcon from '@material-ui/icons/LocalFlorist';
@@ -14,10 +14,7 @@ import CakeIcon from '@material-ui/icons/Cake';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        // borderTop: '3rem solid ' + theme.palette.blue.main,
-        // borderBottom: '3rem solid ' + theme.palette.blue.main,
         backgroundColor: theme.palette.light.main
-        // color: 'white'
     },
     avatar: {
         maxWidth: '100%',
@@ -49,10 +46,8 @@ export default function About() {
                         <Typography paragraph className={classes.content}>Well hello there! My name is Heather, and I'm a lifelong lover of web development and design.  </Typography>
                         <Typography paragraph className={classes.content}>I proudly grauated from the University of North Texas with B.S. in Computer Science, and focus using my knowledge to create great user experiences.</Typography>
                         <Typography paragraph className={classes.content}>When I'm not coding, I enjoy doing some other things: </Typography>
-
                         <Grid container justify="left">
                             <List>
-
                                 <FadeInSection direction="left">
                                     <ListItem>
                                         <ListItemIcon>
@@ -103,14 +98,11 @@ export default function About() {
                                         <ListItemText primary="Fostering Great Pyrenees" secondary="Yes - the vacuuming is never-ending" />
                                     </ListItem>
                                 </FadeInSection>
-
                             </List>
                         </Grid>
-
                     </Grid>
                 </Grid>
             </Container>
-
         </Box >
     )
 }

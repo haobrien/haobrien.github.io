@@ -3,6 +3,7 @@ import Skill from './Skill';
 import { Box, Grid, Container, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import 'devicon'
+import skills from './config/skills';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -12,19 +13,6 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.white.main
     }
 }))
-
-const skills = [
-    { name: 'HTML', icon: 'devicon-html5-plain' },
-    { name: 'CSS/JSS', icon: 'devicon-css3-plain' },
-    { name: 'JavaScript', icon: 'devicon-javascript-plain' },
-    { name: 'React', icon: 'devicon-react-original' },
-    { name: 'Mongo', icon: 'devicon-mongodb-plain' },
-    { name: 'Express.js', icon: 'devicon-express-original' },
-    { name: 'Git', icon: 'devicon-git-plain' },
-    { name: 'GitHub', icon: 'devicon-github-original' },
-    // { name: 'AGILE Development', icon: 'devicon-javascript-plain' },
-]
-
 
 export default function SkillsContainer() {
     const classes = useStyles()

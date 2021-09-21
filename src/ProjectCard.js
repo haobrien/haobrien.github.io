@@ -1,14 +1,14 @@
 import React from 'react';
+import FadeInSection from './FadeInSection'
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
 import { Divider, Box, Chip } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import FadeInSection from './FadeInSection'
 import PersonalVideoIcon from '@material-ui/icons/PersonalVideo';
 
 const useStyles = makeStyles(theme => ({
@@ -38,7 +38,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function ProjectCard({ name, description, img, demoUrl, repoUrl, skills }) {
     const classes = useStyles();
-
     return (
         <FadeInSection direction="up">
             <Card className={classes.root} elevation={3}>

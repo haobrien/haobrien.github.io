@@ -12,20 +12,29 @@ const useStyles = makeStyles(theme => ({
     icon: {
         color: theme.palette.primary.main,
     },
+    front: {
+        '& div': {
+            border: '3px solid ' + theme.palette.primary.main,
+            backgroundColor: theme.palette.light.main,
+            color: theme.palette.primary.main,
+        }
+    },
     back: {
         '& div': {
+            border: '3px solid ' + theme.palette.tertiary.main,
             backgroundColor: theme.palette.tertiary.main,
-            color: theme.palette.white.main
+            color: theme.palette.light.main,
         }
     }
 }))
+
 export default function Skill({ name, icon }) {
     const classes = useStyles()
     return (
         <Grid item>
             <div className="flip-container" ontouchstart="this.classList.toggle('hover');">
                 <div className={`flipper`}>
-                    <div className="front">
+                    <div className={`front ${classes.front}`}>
                         <Avatar aria-describedby={name} className={`skill ${classes.flipper}`}>
                             <i className={`${icon} ${classes.icon}`} alt={name}></i>
                         </Avatar>
@@ -38,7 +47,5 @@ export default function Skill({ name, icon }) {
                 </div>
             </div>
         </Grid>
-
-
     )
 }
