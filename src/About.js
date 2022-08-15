@@ -43,7 +43,7 @@ export default function About() {
                         </Box>
                     </Grid>
                     <Grid item sm>
-                        <Typography paragraph className={classes.content}>Well hello there! My name is Heather, and I'm a lifelong lover of web development and design.  </Typography>
+                        <Typography paragraph className={classes.content}>Hello there! My name is Heather, and I'm a lifelong lover of web development and design.  </Typography>
                         <Typography paragraph className={classes.content}>I proudly grauated from the University of North Texas with B.S. in Computer Science, and focus using my knowledge to create great user experiences.</Typography>
                         <Typography paragraph className={classes.content}>When I'm not coding, I enjoy doing some other things: </Typography>
                         <Grid container justify="left">
@@ -55,7 +55,7 @@ export default function About() {
                                                 <CakeIcon />
                                             </Box>
                                         </ListItemIcon>
-                                        <ListItemText primary="Cooking & Baking" secondary="I'll take any excuse to bake a cake" />
+                                        <ListItemText primary="Cooking & Baking" />
                                     </ListItem>
                                 </FadeInSection>
                                 <FadeInSection direction="left">
@@ -65,7 +65,7 @@ export default function About() {
                                                 <VideogameAssetIcon />
                                             </Box>
                                         </ListItemIcon>
-                                        <ListItemText primary="Gaming" secondary="Especially the classics and VR" />
+                                        <ListItemText primary="Gaming"/>
                                     </ListItem>
                                 </FadeInSection>
                                 <FadeInSection direction="left">
@@ -75,7 +75,7 @@ export default function About() {
                                                 <LocalFloristIcon />
                                             </Box>
                                         </ListItemIcon>
-                                        <ListItemText primary="Gardening & Landscaping" secondary="All plants - indoors & out" />
+                                        <ListItemText primary="Home Improvement" />
                                     </ListItem>
                                 </FadeInSection>
                                 <FadeInSection direction="left">
@@ -85,7 +85,7 @@ export default function About() {
                                                 <MenuBookIcon />
                                             </Box>
                                         </ListItemIcon>
-                                        <ListItemText primary="Reading" secondary="Currently working through the Wheel of Time" />
+                                        <ListItemText primary="Reading" />
                                     </ListItem>
                                 </FadeInSection>
                                 <FadeInSection direction="left">
@@ -95,7 +95,7 @@ export default function About() {
                                                 <PetsIcon />
                                             </Box>
                                         </ListItemIcon>
-                                        <ListItemText primary="Fostering Great Pyrenees" secondary="Yes - the vacuuming is never-ending" />
+                                        <ListItemText primary="Playing with my giant dogs" />
                                     </ListItem>
                                 </FadeInSection>
                             </List>

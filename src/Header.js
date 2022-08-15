@@ -55,7 +55,8 @@ export default function Header() {
                     Hi there! I'm <span className="signature">Heather O'Brien</span>
                 </Typography>
                 <Typography variant="h5">
-                    I really enjoy coding. Especially with <span className={classes.highlight1}>JavaScript</span> and <span className={classes.highlight2}>React</span>.
+                    {/* I really enjoy coding. Especially with <span className={classes.highlight1}>Front-End</span> and <span className={classes.highlight2}>React</span>. */}
+                    I really enjoy coding. Especially with <span className={classes.highlight1}>Front-End</span> languages and frameworks.
                 </Typography>
                 <div className={classes.socialIcons}>
                     <a rel="noreferrer" href="https://github.com/haobrien" target="_blank">
