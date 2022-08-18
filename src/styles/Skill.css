@@ -18,13 +18,13 @@
 }
 
 .flipper {
-    -webkit-transition: 0.6s;
+    -webkit-transition: 350ms;
     -webkit-transform-style: preserve-3d;
-    -moz-transition: 0.6s;
+    -moz-transition: 350ms;
     -moz-transform-style: preserve-3d;
-    -o-transition: 0.6s;
+    -o-transition: 350ms;
     -o-transform-style: preserve-3d;
-    transition: 0.6s;
+    transition: 350ms;
     transform-style: preserve-3d;
     position: relative;
 }

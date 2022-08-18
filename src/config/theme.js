@@ -29,15 +29,15 @@ const theme = createTheme({
             highlight: 'rgba(101,184,206,0.5)'
         },
         primary: {
-            main: '#ffa69e',
+            main: '#eb8773',
             highlight: 'rgba(255, 166, 158,0.5)'
         },
         secondary: {
-            main: '#aed9e0',
+            main: '#a0d5de',
             highlight: 'rgba(174, 217, 224,0.5)'
         },
         tertiary: {
-            main: '#75E6CF',
+            main: '#67c9b5',
             highlight: 'rgba(117, 230, 207, 0.5)',
         },
     },

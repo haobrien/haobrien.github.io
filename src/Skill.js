@@ -14,14 +14,14 @@ const useStyles = makeStyles(theme => ({
     },
     front: {
         '& div': {
-            border: '3px solid ' + theme.palette.primary.main,
+            border: '4px solid ' + theme.palette.primary.main,
             backgroundColor: theme.palette.light.main,
             color: theme.palette.primary.main,
         }
     },
     back: {
         '& div': {
-            border: '3px solid ' + theme.palette.tertiary.main,
+            border: '4px solid ' + theme.palette.tertiary.main,
             backgroundColor: theme.palette.tertiary.main,
             color: theme.palette.light.main,
         }
